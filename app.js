@@ -1,5 +1,8 @@
-const mongoose = require('mongoose')
-const {DB_HOST} = require('./config')
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
+
+const { DB_HOST } = process.env;
 
 
 mongoose.connect(DB_HOST, {
@@ -14,3 +17,5 @@ mongoose.connect(DB_HOST, {
     .catch(error => {
         console.log(error.message)
     })
+
+dotenv.config()
