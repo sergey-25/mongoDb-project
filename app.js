@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-    
-const DB_HOST = "mongodb+srv://sergey45:1234Azxcvbnm@cluster0.d8riu.mongodb.net/test"
+const {DB_HOST} = require('./config')
+
 
 mongoose.connect(DB_HOST, {
     useNewUrlParser: true,
